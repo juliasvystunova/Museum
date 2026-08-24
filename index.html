@@ -87,7 +87,7 @@
 
         <article class="events__exhibition exhibition">
           <img
-            src="/src/images/events/events 1 card.jpg"
+            src="/src/images/events/events-1-card.jpg"
             alt="exhibition photo"
             class="exhibition__photo"
           >
@@ -109,7 +109,7 @@
         </article>
         <article class="events__exhibition exhibition">
           <img
-            src="/src/images/events/events 2 card.jpg"
+            src="/src/images/events/events-2-card.jpg"
             alt="exhibition photo"
             class="exhibition__photo"
           >
@@ -260,6 +260,26 @@
         </p>
       </div>
     </footer>
-    <script src="/src/scripts/main.js"></script>
+    <script>
+      'use strict';
+
+      const iconMenu = document.querySelector('.icon--menu');
+      const navLinks = document.querySelectorAll('.nav__link');
+      const iconClose = document.querySelector('.icon--close');
+
+      iconMenu.addEventListener('click', () => {
+        document.body.classList.add('page__body--menu-open');
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          document.body.classList.remove('page__body--menu-open');
+        });
+      });
+
+      iconClose.addEventListener('click', () => {
+        document.body.classList.remove('page__body--menu-open');
+      });
+    </script>
   </body>
 </html>
