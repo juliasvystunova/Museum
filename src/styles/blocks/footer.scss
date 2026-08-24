@@ -1,4 +1,6 @@
 .footer {
+  color: $main-title-text-color;
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -49,6 +51,16 @@
 
   &__contacts {
     align-self: start;
+
+    &-tel {
+      color: $main-title-text-color;
+      text-decoration: none;
+      transition: font-weight $transition-time;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
   }
 
   &__timetable {
