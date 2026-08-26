@@ -9,6 +9,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
+    background-color: $page-background-color;
     padding-left: 24px;
     outline: none;
 
@@ -25,6 +26,12 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 100%;
+    }
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $page-background-color inset; // Це приховає жовтий фон, "вставляючи" твій колір
+      -webkit-text-fill-color: #000; // Це встановлює колір тексту. Заміни #000 на той, що тобі потрібен.
+      transition: background-color 5000s ease-in-out 0s; // Допомагає уникнути миттєвої зміни кольору
     }
   }
 
